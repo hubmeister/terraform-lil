@@ -6,3 +6,11 @@ resource "aws_vpc" "environment-example-two" {
     Name = "terraform-aws-vpc-example-two"
   }
 }
+resource "aws_vpc" "environment-example-three" {
+  cidr_block = "10.1.0.0/16"
+  enable_dns_hostnames = true
+  enable_dns_support = true
+  tags {
+    name = "terraform-aws-vpc-example-three"
+  }
+}
